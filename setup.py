@@ -18,7 +18,7 @@ readme = open(join(dirname(__file__), 'README.rst')).read()
 crypto_requires = ['cryptography>=1.3.0']
 twisted_requires = ['twisted>=17.1', 'txredisapi']
 test_requires = crypto_requires + [
-    'pytest>=3.0',
+    'pytest>=3.6',
     'pytest-django>=3.0',
     'asgi_ipc',
     'channels<2',

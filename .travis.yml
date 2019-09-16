@@ -1,11 +1,8 @@
-sudo: false
-dist: trusty
 language: python
 python:
   - "2.7"
-  - "3.4"
-  - "3.5"
   - "3.6"
+  - "3.7"
 services:
   - redis-server
 cache:
@@ -13,7 +10,7 @@ cache:
   - $HOME/.cache/pip/wheels
 install:
   - pip install -U pip wheel setuptools
-  - pip install 'git+https://github.com/django/channels.git#egg=channels-benchmark&subdirectory=testproject'
+  - pip install 'git+https://github.com/django/channels.git@1.x#egg=channels-benchmark&subdirectory=testproject'
   - pip install -e .[tests]
   - pip freeze
 script: py.test
